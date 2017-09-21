@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/cem/locale/el_GR/locale.xml
+  *
+  * Copyright (c) 2017 FU Berlin
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this plugin.
+  *
+  -->
+
+<locale name="el_GR" full_name="el_GR">
+
+	<message key="plugins.generic.cem.displayName">GR Cem Plugin</message>
+	<message key="plugins.generic.cem.description">Plugin CeMoG</message>
+	
+	<message key="plugins.generic.cem.primnav.about">GR Edition Romiosini</message>
+	<message key="plugins.generic.cem.primnav.catalog">GR Buecher</message>	
+	<message key="plugins.generic.cem.primnav.newsletter">GR Newsletter</message>
+	<message key="plugins.generic.cem.bookreader.linkname">GR Online Lesen</message>	
+	
+	<message key="plugins.generic.cemog.submission.additionalMetadata">GR Zusätzliche Metadaten</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.printOnDemand">GR Print-On-Demand-URL</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.orderEbook">GR eBook-Bestellen-URL</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.reviews">GR Rezensionen</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.pressMaterial">GR Pressematerialien</message>	
+	
+	<message key="plugins.generic.cemog.submission.index.text">GR Hier kann noch Text rein, muss aber in locale.xml</message>	
+	
+	
+</locale>

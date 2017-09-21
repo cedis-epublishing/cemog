@@ -1,0 +1,34 @@
+/*
+ * Custom overrides for BookReader Demo.
+ */
+
+/* Hide print and embed functionality */
+#BRtoolbar .embed, .print {
+    display: none;
+}
+
+/* unklar, warum das gemacht werden muss */
+#BRpage {
+		padding-left: 0px !important;
+}
+
+/* das klappt leider nicht, code ist im display.tpl */
+#BookReader {
+	width:100% !important;
+	height:800px !important;
+	overflow: hidden !important;
+}
+
+.BRTitleLink {
+	color: #c00 !important;
+}
+
+.header.responsive {
+	color: #c00 !important;
+}
+
+#BRreturn {
+	
+	overflow:hidden;
+}
+

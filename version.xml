@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * @file plugins/generic/primaryNavigation/version.xml
+  *
+  * Copyright (c) 2016 Language Science Press
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  -->
+<version>
+	<application>cem</application>
+	<type>plugins.generic</type>
+	<release>1.0.0.0</release>
+	<date>2017-08-31</date>
+	<lazy-load>1</lazy-load>
+	<sitewide>0</sitewide>
+	<class>CemPlugin</class>
+</version>

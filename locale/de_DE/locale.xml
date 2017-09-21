@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/cem/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2016 FU Berlin
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this plugin.
+  *
+  -->
+
+<locale name="de_DE" full_name="German">
+
+	<message key="plugins.generic.cem.displayName">Cem Plugin</message>
+	<message key="plugins.generic.cem.description">Plugin für alle Cem-Funktionen</message>
+
+	
+	<message key="plugins.generic.cem.primnav.about">Edition Romiosini</message>
+	<message key="plugins.generic.cem.primnav.catalog">Bücher</message>	
+	<message key="plugins.generic.cem.primnav.newsletter">Newsletter</message>
+	<message key="plugins.generic.cem.bookreader.linkname">Online Lesen</message>
+
+	<message key="plugins.generic.cemog.submission.additionalMetadata">Zusätzliche Metadaten</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.printOnDemand">Print-On-Demand-URL</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.orderEbook">eBook-Bestellen-URL</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.reviews">Rezensionen</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.pressMaterial">Pressematerialien</message>	
+
+	<message key="plugins.generic.cemog.submission.index.text">Hier kann noch Text rein, muss aber in locale.xml</message>	
+
+	
+</locale>
