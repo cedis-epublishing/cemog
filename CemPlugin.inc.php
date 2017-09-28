@@ -83,7 +83,13 @@ class CemPlugin extends GenericPlugin {
 			case 'frontend/components/header.tpl':
 				$templateMgr->display($this->getTemplatePath() . 
 				'headerModified.tpl', 'text/html', 'TemplateManager::include');
-				return true;				
+				return true;
+			case 'frontend/components/breadcrumbs.tpl':
+				$templateMgr->display($this->getTemplatePath() .'emptyTemplate.tpl', 'text/html', 'TemplateManager::include');
+				return true;
+			case 'frontend/components/breadcrumbs_catalog.tpl':
+				$templateMgr->display($this->getTemplatePath() .'emptyTemplate.tpl', 'text/html', 'TemplateManager::include');
+				return true;
 		}
 		return false;
 	}
@@ -182,13 +188,6 @@ class CemPlugin extends GenericPlugin {
 	 * @param $args array The parameters to the invoked hook
 	 */
 	function handleDeleteFile($hookName, $args) {
-		
-$myfile = 'test.txt';
-$newContentCF5344 = print_r($args, true);
-$contentCF2343 = file_get_contents($myfile);
-$contentCF2343 .= "\n handleDeleteFile,args: " . $newContentCF5344 ;
-file_put_contents($myfile, $contentCF2343 );		
-		
 		$filePath =& $args[0];
 		$path_parts = pathinfo($filePath);
 		$fileMimeType = mime_content_type($filePath);
