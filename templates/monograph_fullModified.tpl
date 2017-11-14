@@ -65,28 +65,21 @@
  *       text. Only appears when license URL matches a known CC license.
  *}
 <div class="obj_monograph_full">
+
 	<h1 class="title">
 		{$monograph->getLocalizedFullTitle()|escape}
 	</h1>
-			{* Author list *}
-			<div class="item authors">
-				<h2 class="pkp_screen_reader">
-					{translate key="submission.authors"}
-				</h2>
 
-				{assign var="authors" value=$monograph->getAuthors()}
+	{* Author list *}
+	<div class="item authors">
+		<h2 class="pkp_screen_reader">
+			{translate key="submission.authors"}
+		</h2>
 
-					{foreach name="authors" from=$authors item=author}
-						{* strip removes excess white-space which creates gaps between separators *}
-						{strip}
-								<span class="label">{$author->getFullName()|escape}</span>
-							{if !$smarty.foreach.authors.last}
-								{translate key="submission.authorListSeparator"}
-							{/if}
-						{/strip}
-					{/foreach}
-	
-			</div>
+		<div class="author">
+			{$monograph->getAuthorString()|escape}
+		</div>
+	</div>
 			
 	<div class="row">
 		<div class="main_entry">
@@ -258,12 +251,12 @@ ende_Templates::Catalog::Book::Main
 				<img alt="{translate key="catalog.coverImageTitle" monographTitle=$monograph->getLocalizedFullTitle()|strip_tags|escape}" src="{url router=$smarty.const.ROUTE_COMPONENT component="submission.CoverHandler" op="thumbnail" submissionId=$monograph->getId() random=$monograph->getId()|uniqid}" />
 			</div>
 
-			{* Sharing code *}anfang_sharingcode
+			{* Sharing code *}
 			{if !is_null($sharingCode)}
 				<div class="item sharing">
 					{$sharingCode}
 				</div>
-			{/if}ende_sharingcode
+			{/if}
 
 			{* Any non-chapter files and remote resources *}
 			{pluck_files assign=nonChapterFiles files=$availableFiles by="chapter" value=0}
@@ -329,8 +322,16 @@ ende_Templates::Catalog::Book::Main
 							{/if}
 						{/if}
 					{/foreach}{* Publication formats loop *}
-					<p>todo: button "Printversion erwerben"</p>
-					<p>todo: button "E-book erwerben"</p>
+					{if $publishedMonograph->getLocalizedData('cemogPrintOnDemandUrl') != ''}
+						<div>
+							<a class="cmp_download_link" href="{$publishedMonograph->getLocalizedData('cemogPrintOnDemandUrl')}">{translate key="plugins.generic.cemog.book.printOnDemand"}</a>
+						</div>
+					{/if}
+					{if $publishedMonograph->getLocalizedData('cemogOrderEbookUrl') != ''}
+						<div>
+							<a class="cmp_download_link" href="{$publishedMonograph->getLocalizedData('cemogOrderEbookUrl')}">{translate key="plugins.generic.cemog.book.orderEbook"}</a>
+						</div>
+					{/if}
 				</div>
 			{/if}
 

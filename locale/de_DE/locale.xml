@@ -30,5 +30,8 @@
 
 	<message key="plugins.generic.cemog.submission.index.text">Hier kann noch Text rein, muss aber in locale.xml</message>	
 
+	<message key="plugins.generic.cemog.submission.primnav.announcements">Aktuelles</message>	
+	<message key="plugins.generic.cemog.book.printOnDemand">Printversion erwerben</message>
+	<message key="plugins.generic.cemog.book.orderEbook">E-Book erwerben</message>	
 	
 </locale>

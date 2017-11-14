@@ -42,7 +42,7 @@
 	{if $enableAnnouncements}
 		<li>
 			<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement"}">
-				{translate key="announcement.announcements"}
+				{translate key="plugins.generic.cemog.submission.primnav.announcements"}
 			</a>
 		</li>
 	{/if}

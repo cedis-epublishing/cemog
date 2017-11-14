@@ -37,11 +37,45 @@ class CemPlugin extends GenericPlugin {
 				// Delete the Bookreader directory when deleting the ZIP-file
 				HookRegistry::register('FileManager::deleteFile', array($this, 'handleDeleteFile'));
 
-				
-				}
+				HookRegistry::register('publicprofileform::Constructor', array($this, 'handleFormConstructor'));
+				HookRegistry::register('contactform::Constructor', array($this, 'handleFormConstructor'));
+				HookRegistry::register('registrationform::Constructor', array($this, 'handleFormConstructor'));
+			}
 			return true;
 		}
 		return false;
+	}
+	
+	function handleFormConstructor($hookName, $args) {
+		$request = $this->getRequest();
+		$templateMgr = TemplateManager::getManager($request);
+		$form =& $args[0];
+		
+		if (in_array($hookName,array('publicprofileform::Constructor','contactform::Constructor'))){		
+			$user = Request::getUser();
+			$roleDao = DAORegistry::getDAO('RoleDAO');
+			$userRoles = $roleDao->getByUserId($user->getId(),$request->getContext()->getId());
+			$uploadAllowed = false;
+			foreach ($userRoles as $userRole) {
+				if (in_array($userRole->getId(), array(ROLE_ID_SITE_ADMIN,ROLE_ID_MANAGER,ROLE_ID_SUB_EDITOR))) {
+					$uploadAllowed = true;
+				}
+			}
+			$templateMgr->assign('uploadAllowed', $uploadAllowed);
+		}
+			
+		switch ($hookName) {
+			case 'publicprofileform::Constructor':				
+				$form->setTemplate($this->getTemplatePath() . 'publicProfileFormModified.tpl');
+				return true;
+			case 'contactform::Constructor':				
+				$form->setTemplate($this->getTemplatePath() . 'contactFormModified.tpl');
+				return true;
+			case 'registrationform::Constructor':				
+				$form->setTemplate($this->getTemplatePath() . 'userRegisterModified.tpl');
+				return true;				
+		}
+		return false;	
 	}
 	
 	/**
@@ -54,8 +88,7 @@ class CemPlugin extends GenericPlugin {
 		$templateMgr =& $args[0];
 		$template =& $args[1];
 		
-		switch ($template) {
-			
+		switch ($template) {	
 			case 'frontend/pages/book.tpl':	
 				$templateMgr->display($this->getTemplatePath() . 'bookModified.tpl', 'text/html', 'TemplateManager::display');
 				return true;

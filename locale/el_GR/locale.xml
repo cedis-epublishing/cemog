@@ -28,6 +28,9 @@
 	<message key="plugins.generic.cemog.submission.additionalMetadata.pressMaterial">GR Pressematerialien</message>	
 	
 	<message key="plugins.generic.cemog.submission.index.text">GR Hier kann noch Text rein, muss aber in locale.xml</message>	
-	
-	
+
+	<message key="plugins.generic.cemog.submission.primnav.announcements">GR Aktuelles</message>	
+	<message key="plugins.generic.cemog.book.printOnDemand">GR Printversion erwerben</message>
+	<message key="plugins.generic.cemog.book.orderEbook">GR E-Book erwerben</message>
+
 </locale>
