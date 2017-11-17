@@ -33,4 +33,9 @@
 	<message key="plugins.generic.cemog.book.printOnDemand">GR Printversion erwerben</message>
 	<message key="plugins.generic.cemog.book.orderEbook">GR E-Book erwerben</message>
 
+	<message key="plugins.generic.cemog.register.sendPassword"><![CDATA[GR Ja, ich möchte eine Bestätigungs-Email mit meinem Login und Passwort bekommen.]]></message>
+	<message key="plugins.generic.cemog.register.newsletter"><![CDATA[GR Ja, ich möchte mich für den <a href="http://www.cemog.fu-berlin.de/newsletter/newsletter-archiv/index.html" target="_blank">CeMoG-Newsletter</a> anmelden. Die Daten werden nicht an Dritte weitergegeben und ich kann mich jederzeit <a href="http://www.cemog.fu-berlin.de/newsletter/angaben-aktualisieren/index.html">abmelden</a>.]]></message>
+	<message key="plugins.generic.cemog.register.termsOfUse"><![CDATA[<span class="req">*</span>GR Ja, ich habe die <a href="http://bibliothek.edition-romiosini.de/nutzungsbedingungen" target="_blank">Nutzungsbedingungen</a> für Online-Bibliothek der Edition Romiosini/CeMoG gelesen und akzeptiert.]]></message>
+	
+	
 </locale>

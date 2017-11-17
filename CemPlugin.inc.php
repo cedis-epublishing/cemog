@@ -40,17 +40,124 @@ class CemPlugin extends GenericPlugin {
 				HookRegistry::register('publicprofileform::Constructor', array($this, 'handleFormConstructor'));
 				HookRegistry::register('contactform::Constructor', array($this, 'handleFormConstructor'));
 				HookRegistry::register('registrationform::Constructor', array($this, 'handleFormConstructor'));
+
+				HookRegistry::register('registrationform::validate', array($this, 'handleRegistrationFormValidation'));
+
+				// Additional registration form fields
+				HookRegistry::register('registrationform::readuservars', array($this, 'registrationFormReadUserVars'));
+ 				HookRegistry::register('registrationform::execute', array($this, 'registrationFormSave'));
+				// Consider the new registration form fields in UserDAO for storage
+				HookRegistry::register('userdao::getAdditionalFieldNames', array($this, 'registrationGetFieldNames'));
+
+				
+				
 			}
 			return true;
 		}
 		return false;
 	}
 	
+	
+
+	/**
+	 * Read new registration fields (newsletter, terms of use) from the form
+	 */
+	function registrationFormReadUserVars($hookName, $params) {
+		$userVars =& $params[1];
+		$userVars[] = 'cemogNewsletter';
+		$userVars[] = 'cemogTermsOfUse';
+		return false;
+	}
+
+	/**
+	 * Save new registration form fields (newsletter, terms of use), table user_settings
+	 */
+	function registrationFormSave($hookName, $params) {
+		$registrationForm =& $params[0];
+		$user =& $params[1];
+		$cemogNewsletter = $registrationForm->getData('cemogNewsletter');
+		$cemogTermsOfUse = $registrationForm->getData('cemogTermsOfUse');
+		$user->setData('cemogNewsletter', $cemogNewsletter);
+		$user->setData('cemogTermsOfUse', $cemogTermsOfUse);
+		return false;
+	}
+
+	/**
+	 * Add new registration form fields to the user
+	 */
+	function registrationGetFieldNames($hookName, $params) {
+		$fields =& $params[1];
+		$fields[] = 'cemogNewsletter';
+		$fields[] = 'cemogTermsOfUse';
+		return false;
+	}	
+	
+	function handleRegistrationFormValidation($hookName, $args) {
+
+		$request = $this->getRequest();
+		$context = $request->getContext();
+		
+		$registrationForm =& $args[0];
+		$isValid =& $args[1];
+
+		// remove country error message from error array
+		$errors =& $registrationForm->_errors;
+		foreach ($errors as $key => $error) {
+			if ($error->getField()=="country") {
+				unset($errors[$key]); 
+			}
+		}
+
+		// skip validation test for country
+		$isValid = true;
+		foreach ($registrationForm->_checks as $check) {
+			if ($check->getField()!="country") {
+				$isValid = $isValid & $check->isValid();
+			}	
+		}
+		//$user = $registrationForm->getUser();
+		
+$myfile = 'test.txt';
+$newContentCF5344 = print_r($registrationForm->_data['password'], true);
+$contentCF2343 = file_get_contents($myfile);
+$contentCF2343 .= "\n test: " . $newContentCF5344 ;
+file_put_contents($myfile, $contentCF2343 );
+		
+		//if ($isValid) {
+				// Send welcome email to user
+		/*		import('lib.pkp.classes.mail.MailTemplate');
+				$user = ???
+				$mail = new MailTemplate('USER_REGISTER');
+				$mail->setReplyTo($context->getSetting('contactEmail'), $context->getSetting('contactName'));
+				$mail->assignParams(array('username' => $user->getUsername(), 'password' => $password, 'userFullName' => $user->getFullName()));
+				$mail->addRecipient($user->getEmail(), $user->getFullName());
+				$mail->send();*/
+		//}
+		if ($isValid) {
+			
+			$username = $registrationForm->_data['username'];
+			$password = $registrationForm->_data['password'];
+			$fullName = $registrationForm->_data['firstName']. " " . $registrationForm->_data['lastName'];
+			$email = $registrationForm->_data['email'];
+
+			if ($username && $password) {
+				// Send welcome email to user
+				import('lib.pkp.classes.mail.MailTemplate');		
+				$mail = new MailTemplate('USER_REGISTER');
+				$mail->setReplyTo($context->getSetting('contactEmail'), $context->getSetting('contactName'));
+				$mail->assignParams(array('username' => $username, 'password' => $password, 'userFullName' => $fullName));
+				$mail->addRecipient($email, $fullName);
+				$mail->send();
+			}	
+		}		
+		return true;
+	}
+
 	function handleFormConstructor($hookName, $args) {
 		$request = $this->getRequest();
 		$templateMgr = TemplateManager::getManager($request);
 		$form =& $args[0];
-		
+
 		if (in_array($hookName,array('publicprofileform::Constructor','contactform::Constructor'))){		
 			$user = Request::getUser();
 			$roleDao = DAORegistry::getDAO('RoleDAO');
