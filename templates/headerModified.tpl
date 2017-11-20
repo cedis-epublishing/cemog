@@ -86,12 +86,12 @@
 				<nav class="pkp_navigation_user_wrapper navDropdownMenu" id="navigationUserWrapper" aria-label="{translate|escape key="common.navigation.user"}">
 					<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
 						<li>
-							<a class="social_media_icon" href="https://www.facebook.com/xxx/" title="CeM on Facebook">
+							<a class="social_media_icon" href="https://www.facebook.com/EditionRomiosini" title="{translate key="plugins.generic.cemog.facebook.tooltip"}">
 								<img alt="" src="{$baseUrl}/plugins/generic/cem/img/facebook30.png"></img>
 							</a>
 						</li>
 						<li>
-							<a class="social_media_icon" href="https://twitter.com/xxx" title="CeM on Twitter">
+							<a class="social_media_icon" href="http://twitter.com/CeMoG_Berlin" title="{translate key="plugins.generic.cemog.twitter.tooltip"}">
 								<img alt="" src="{$baseUrl}/plugins/generic/cem/img/twitter.png"></img>
 							</a>
 						</li>					

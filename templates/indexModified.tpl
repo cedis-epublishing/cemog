@@ -26,7 +26,7 @@
 		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-belletristik1.jpg" alt="belletristik">
 	</a>
 	<a href="{$baseUrl}/index.php/romiosini/catalog/series/sachbuch">	
-		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-sachbuch2.jpg"> 		
+		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-sachbuch2.jpg" alt="sachbuch"> 		
 	</a>
 	<a href="{$baseUrl}/index.php/romiosini/catalog/series/fachliteratur">	
 		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-fachliteratur1.jpg" alt="fachliteratur"> 

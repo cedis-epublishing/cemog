@@ -206,7 +206,10 @@ file_put_contents($myfile, $contentCF2343 );*/
 			case 'frontend/pages/index.tpl':	
 				$templateMgr->assign('pluginPath',$request->getBaseUrl());
 				$templateMgr->display($this->getTemplatePath() . 'indexModified.tpl', 'text/html', 'TemplateManager::display');
-				return true;				
+				return true;	
+			case 'frontend/pages/userLogin.tpl':
+				$templateMgr->assign('loginMessage', 'plugins.generic.cemog.login.loginMessage');
+				break;				
 		}
 		return false;
 	}
