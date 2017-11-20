@@ -14,7 +14,7 @@
 <locale name="el_GR" full_name="el_GR">
 
 	<message key="plugins.generic.cem.displayName">GR Cem Plugin</message>
-	<message key="plugins.generic.cem.description">Plugin CeMoG</message>
+	<message key="plugins.generic.cem.description">GR Plugin CeMoG</message>
 	
 	<message key="plugins.generic.cem.primnav.about">GR Edition Romiosini</message>
 	<message key="plugins.generic.cem.primnav.catalog">GR Buecher</message>	
@@ -39,10 +39,18 @@
 	
 	<message key="plugins.generic.cemog.register.registerMessage"><![CDATA[<p>GR Der Buchkatalog der Edition Romiosini/CeMoG ist über die Online-Bibliothek frei zugänglich. Für die kostenlose Online-Lektüre der dort aufgeführten Publikationen ist eine Registrierung erforderlich. Vor der erstmaligen Nutzung des Bookreaders muss jede/r Nutzer/in sich mit einem Namen und einer Email-Adresse registrieren und die vorliegenden Nutzungsbedingungen anerkennen.</p><p><a href="../login">Klicken Sie hier</a>, wenn Sie bereits einen Login für die Nutzung der Online-Bibliothek haben.</p>]]></message>
 
-	<message key="plugins.generic.cemog.facebook.tooltip">GR Die Edition Romiosini bei Facebook</message>	
+	<message key="plugins.generic.cemog.facebook.tooltip">GR Die Edition Romiosini bei Facebook</message>
+	<message key="plugins.generic.cemog.google.tooltip">GR Die Edition Romiosini bei Google+</message>	
+	<message key="plugins.generic.cemog.youtube.tooltip">GR Das Centrum Modernes Griechenland bei YouTube</message>	
+	<message key="plugins.generic.cemog.academia.tooltip">GR Die Edition Romiosini bei Academia.edu</message>		
 	<message key="plugins.generic.cemog.twitter.tooltip">GR Das Centrum Modernes Griechenland bei Twitter</message>
 	
 	<message key="plugins.generic.cemog.login.loginMessage">GR Melden Sie sich mit Ihrem Benutzernamen und Ihrem Passwort an, um die Bücher der Edition Romiosini kostenlos zu lesen.</message>
-	
+
+	<message key="plugins.generic.cemog.bookpage.aboutThisBook">GR Über dieses Buch</message>
+	<message key="plugins.generic.cemog.bookpage.biogramme">GR Biogramme</message>
+	<message key="plugins.generic.cemog.bookpage.pressematerialien">GR Pressematerialien</message>
+	<message key="plugins.generic.cemog.bookpage.rezensionen">GR Rezensionen</message>	
+	<message key="plugins.generic.cemog.bookpage.feedback">GR Ihr Feedback zum Buch</message>	
 	
 </locale>

@@ -87,12 +87,27 @@
 					<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
 						<li>
 							<a class="social_media_icon" href="https://www.facebook.com/EditionRomiosini" title="{translate key="plugins.generic.cemog.facebook.tooltip"}">
-								<img alt="" src="{$baseUrl}/plugins/generic/cem/img/facebook30.png"></img>
+								<img alt="" src="{$baseUrl}/public/site/images/admin/facebook.png"></img>
 							</a>
 						</li>
 						<li>
+							<a class="social_media_icon" href="https://plus.google.com/107319023312992459667/posts" title="{translate key="plugins.generic.cemog.google.tooltip"}">
+								<img alt="" src="{$baseUrl}/public/site/images/admin/google.png"></img>
+							</a>
+						</li>
+						<li>
+							<a class="social_media_icon" href="https://www.youtube.com/channel/UCLWrb75QSx8aXL-jURQEzoA" title="{translate key="plugins.generic.cemog.youtube.tooltip"}">
+								<img alt="" src="{$baseUrl}/public/site/images/admin/youtube.png"></img>
+							</a>
+						</li>
+						<li>
+							<a class="social_media_icon" href="https://fu-berlin.academia.edu/EditionRomiosini" title="{translate key="plugins.generic.cemog.academia.tooltip"}">
+								<img alt="" src="{$baseUrl}/public/site/images/admin/academia.png"></img>
+							</a>
+						</li>						
+						<li>
 							<a class="social_media_icon" href="http://twitter.com/CeMoG_Berlin" title="{translate key="plugins.generic.cemog.twitter.tooltip"}">
-								<img alt="" src="{$baseUrl}/plugins/generic/cem/img/twitter.png"></img>
+								<img alt="" src="{$baseUrl}/public/site/images/admin/twitter.png"></img>
 							</a>
 						</li>					
 						{if $isUserLoggedIn}

@@ -87,24 +87,20 @@
 			<div>
 				{call_hook name="Templates::Catalog::Book::Details"}
 			</div>
-			
-			<div>
-				<a href="#">Ihr Feedback zum Buch</a>
-			</div>
 		
 			<ul class="jumpmark" >
-				<li><a href="#abstract">Über dieses Buch</a></li>
-				<li><a href="#author_bios">Autor/innen-Biografien </a></li>
+				<li><a href="#abstract">{translate key="plugins.generic.cemog.bookpage.aboutThisBook"}</a></li>
+				<li><a href="#author_bios">{translate key="plugins.generic.cemog.bookpage.biogramme"}</a></li>
 				{if $publishedMonograph->getLocalizedData('cemogBookReviews')}
-					<li><a href="#rezensionen">Rezensionen</a></li>
+					<li><a href="#rezensionen">{translate key="plugins.generic.cemog.bookpage.rezensionen"}</a></li>
 				{/if}
 				{if $publishedMonograph->getLocalizedData('cemogBookPressMaterial')}
-					<li><a href="#pressematerialien">Pressematerialien</a></li>
+					<li><a href="#pressematerialien">{translate key="plugins.generic.cemog.bookpage.pressematerialien"}</a></li>
 				{/if}	
-				<li><a href="#">Feedback</a></li>			
+				<li><a href="#">{translate key="plugins.generic.cemog.bookpage.feedback"}</a></li>			
 			</ul>
 
-			{* Abstract *}start_abstract
+			{* Abstract *}
 			<div class="item abstract" id="abstract">
 				<h3 class="label">
 					{translate key="submission.synopsis"}
@@ -112,7 +108,7 @@
 				<div class="value">
 					{$monograph->getLocalizedAbstract()|strip_unsafe_html}
 				</div>
-			</div>	ende_abstract
+			</div>
 
 			{* Chapters *}
 			{if $chapters|@count}
@@ -168,9 +164,9 @@
 					</ul>
 				</div>
 			{/if}
-start_Templates::Catalog::Book::Main
+
 			{call_hook name="Templates::Catalog::Book::Main"}
-ende_Templates::Catalog::Book::Main
+
 			{* Determine if any authors have biographies to display *}
 			{assign var="hasBiographies" value=0}
 			{foreach from=$monograph->getAuthors() item=author}
@@ -182,9 +178,9 @@ ende_Templates::Catalog::Book::Main
 				<div class="item author_bios" id="author_bios">
 					<h3 class="label">
 						{if $hasBiographies > 1}
-							{translate key="submission.authorBiographies"}
+							{translate key="plugins.generic.cemog.bookpage.biogramme"}
 						{else}
-							{translate key="submission.authorBiography"}
+							{translate key="plugins.generic.cemog.bookpage.biogramme"}
 						{/if}
 					</h3>
 					{foreach from=$monograph->getAuthors() item=author}
@@ -218,7 +214,7 @@ ende_Templates::Catalog::Book::Main
 					</div>
 				</div>	
 			{/if}
-			
+
 			{if $publishedMonograph->getLocalizedData('cemogBookPressMaterial')}			
 				<div class="item abstract" id="pressematerialien">
 					<h3 class="label">
@@ -230,7 +226,7 @@ ende_Templates::Catalog::Book::Main
 				</div>	
 			{/if}
 			
-			{* References *}anfang_citations
+			{* References *}
 			{if $monograph->getCitations()}
 				<div class="item references">
 					<h3 class="label">
@@ -240,7 +236,7 @@ ende_Templates::Catalog::Book::Main
 						{$monograph->getCitations()|nl2br}
 					</div>
 				</div>
-			{/if}ende_citations
+			{/if}
 
 		</div><!-- .main_entry -->
 
