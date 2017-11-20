@@ -22,16 +22,17 @@
 <div class="page page_homepage">
 
 	<div class="cemog_home_image">
-	<a href="http://ojs-test.cedis.fu-berlin.de/cemog-test/index.php/romiosini/catalog/series/belletristik">
-		<img src="http://ojs-test.cedis.fu-berlin.de/cemog-test/public/site/images/admin/romiosini-home-belletristik1.jpg" alt="belletristik">
+	<a href="{$baseUrl}/index.php/romiosini/catalog/series/belletristik">
+		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-belletristik1.jpg" alt="belletristik">
 	</a>
-	<a href="http://ojs-test.cedis.fu-berlin.de/cemog-test/index.php/romiosini/catalog/series/sachbuch">	
-		<img src="http://ojs-test.cedis.fu-berlin.de/cemog-test/public/site/images/admin/romiosini-home-sachbuch2.jpg"> 		
+	<a href="{$baseUrl}/index.php/romiosini/catalog/series/sachbuch">	
+		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-sachbuch2.jpg"> 		
 	</a>
-	<a href="http://ojs-test.cedis.fu-berlin.de/cemog-test/index.php/romiosini/catalog/series/fachliteratur">	
-		<img src="http://ojs-test.cedis.fu-berlin.de/cemog-test/public/site/images/admin/romiosini-home-fachliteratur1.jpg" alt="fachliteratur"> 
+	<a href="{$baseUrl}/index.php/romiosini/catalog/series/fachliteratur">	
+		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-fachliteratur1.jpg" alt="fachliteratur"> 
 	</a>
 	</div>
+	
 	{translate key="plugins.generic.cemog.submission.index.text"}
 
 	{* Announcements *}

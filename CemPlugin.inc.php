@@ -204,6 +204,7 @@ file_put_contents($myfile, $contentCF2343 );*/
 				$templateMgr->display($this->getTemplatePath() . 'viewFileModified.tpl', 'text/html', 'TemplateManager::display');
 				return true;	
 			case 'frontend/pages/index.tpl':	
+				$templateMgr->assign('pluginPath',$request->getBaseUrl());
 				$templateMgr->display($this->getTemplatePath() . 'indexModified.tpl', 'text/html', 'TemplateManager::display');
 				return true;				
 		}
