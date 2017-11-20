@@ -35,7 +35,9 @@
 
 	<message key="plugins.generic.cemog.register.sendPassword"><![CDATA[GR Ja, ich möchte eine Bestätigungs-Email mit meinem Login und Passwort bekommen.]]></message>
 	<message key="plugins.generic.cemog.register.newsletter"><![CDATA[GR Ja, ich möchte mich für den <a href="http://www.cemog.fu-berlin.de/newsletter/newsletter-archiv/index.html" target="_blank">CeMoG-Newsletter</a> anmelden. Die Daten werden nicht an Dritte weitergegeben und ich kann mich jederzeit <a href="http://www.cemog.fu-berlin.de/newsletter/angaben-aktualisieren/index.html">abmelden</a>.]]></message>
-	<message key="plugins.generic.cemog.register.termsOfUse"><![CDATA[<span class="req">*</span>GR Ja, ich habe die <a href="http://bibliothek.edition-romiosini.de/nutzungsbedingungen" target="_blank">Nutzungsbedingungen</a> für Online-Bibliothek der Edition Romiosini/CeMoG gelesen und akzeptiert.]]></message>
+	<message key="plugins.generic.cemog.register.termsOfUse"><![CDATA[GR Ja, ich habe die <a href="http://bibliothek.edition-romiosini.de/nutzungsbedingungen" target="_blank">Nutzungsbedingungen</a> für Online-Bibliothek der Edition Romiosini/CeMoG gelesen und akzeptiert.]]></message>
+	
+	<message key="plugins.generic.cemog.register.registerMessage"><![CDATA[<p>GR Der Buchkatalog der Edition Romiosini/CeMoG ist über die Online-Bibliothek frei zugänglich. Für die kostenlose Online-Lektüre der dort aufgeführten Publikationen ist eine Registrierung erforderlich. Vor der erstmaligen Nutzung des Bookreaders muss jede/r Nutzer/in sich mit einem Namen und einer Email-Adresse registrieren und die vorliegenden Nutzungsbedingungen anerkennen.</p><p><a href="../login">Klicken Sie hier</a>, wenn Sie bereits einen Login für die Nutzung der Online-Bibliothek haben.</p>]]></message>
 	
 	
 </locale>

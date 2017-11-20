@@ -116,12 +116,12 @@ class CemPlugin extends GenericPlugin {
 			}	
 		}
 		//$user = $registrationForm->getUser();
-		
+		/*
 $myfile = 'test.txt';
-$newContentCF5344 = print_r($registrationForm->_data['password'], true);
+$newContentCF5344 = print_r($this->getTemplatePath(), true);
 $contentCF2343 = file_get_contents($myfile);
 $contentCF2343 .= "\n test: " . $newContentCF5344 ;
-file_put_contents($myfile, $contentCF2343 );
+file_put_contents($myfile, $contentCF2343 );*/
 		
 		//if ($isValid) {
 				// Send welcome email to user
@@ -180,6 +180,7 @@ file_put_contents($myfile, $contentCF2343 );
 				return true;
 			case 'registrationform::Constructor':				
 				$form->setTemplate($this->getTemplatePath() . 'userRegisterModified.tpl');
+				$templateMgr->assign('templatePath', $this->getTemplatePath());
 				return true;				
 		}
 		return false;	

@@ -14,6 +14,8 @@
 <div class="page page_register">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.register"}
 
+	{translate key="plugins.generic.cemog.register.registerMessage"}
+
 	<form class="cmp_form register" id="register" method="post" action="{url op="registerUser"}">
 		{csrf}
 
@@ -22,8 +24,8 @@
 		{/if}
 
 		{include file="common/formErrors.tpl"}
-       {**todo template url**}
-		{include file="/data/omp/cemog-test/plugins/generic/cem/templates/registrationFormModified.tpl"}
+
+		{include file="$templatePath/registrationFormModified.tpl"}
 		
 		{* When a user is registering with a specific journal *}
 		{if $currentContext}

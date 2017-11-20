@@ -136,9 +136,9 @@
 		<div class="cemogNewsletter">
 			<label>
 				{if $cemogNewsletter}
-					<input type="checkbox" name="cemogNewsletter" value="1" checked="checked">
+					<input type="checkbox" name="cemogNewsletter" id="cemogNewsletter" value="1" checked="checked">
 				{else}
-					<input type="checkbox" name="cemogNewsletter" value="1">				
+					<input type="checkbox" name="cemogNewsletter" id="cemogNewsletter" value="1">				
 				{/if}
 				{translate key="plugins.generic.cemog.register.sendPassword"}				
 			</label>
@@ -146,24 +146,30 @@
 		<div class="sendPassword">
 			<label>
 				{if $sendPassword}
-					<input type="checkbox" name="sendPassword" value="1" checked="checked">
+					<input type="checkbox" name="sendPassword" id="sendPassword" value="1" checked="checked">
 				{else}
-					<input type="checkbox" name="sendPassword" value="1">				
+					<input type="checkbox" name="sendPassword" id="sendPassword" value="1">				
 				{/if}
 				{translate key="plugins.generic.cemog.register.newsletter"}				
 			</label>
 		</div>
 		<div class="cemogTermsOfUse">
 			{url|assign:"termsUrl" page="nutzungsbedingungen"}
-			<label>
-				{if $cemogTermsOfUse}
-					<input type="checkbox" name="cemogTermsOfUse" value="1" checked="checked">
-				{else}
-					<input type="checkbox" name="cemogTermsOfUse" value="1">				
-				{/if}
-				{translate key="plugins.generic.cemog.register.termsOfUse"}				
+			<label>		
+				<span class="label">			
+					{if $cemogTermsOfUse}
+						<input type="checkbox" name="cemogTermsOfUse" id="cemogTermsOfUse" value="1" required="1" checked="checked">
+					{else}
+						<input type="checkbox" name="cemogTermsOfUse" id="cemogTermsOfUse" value="1" required="1" >				
+					{/if}	
+					<span class="required">*</span>
+					<span class="pkp_screen_reader">
+						{translate key="common.required"}
+					</span>					
+					{translate key="plugins.generic.cemog.register.termsOfUse"}			
+				</span>			
 			</label>
-		</div>			
+		</div>		
 	</div>
 </fieldset>
 
