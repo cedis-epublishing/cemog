@@ -48,9 +48,7 @@ class CemPlugin extends GenericPlugin {
  				HookRegistry::register('registrationform::execute', array($this, 'registrationFormSave'));
 				// Consider the new registration form fields in UserDAO for storage
 				HookRegistry::register('userdao::getAdditionalFieldNames', array($this, 'registrationGetFieldNames'));
-
-				
-				
+		
 			}
 			return true;
 		}
@@ -123,16 +121,6 @@ $contentCF2343 = file_get_contents($myfile);
 $contentCF2343 .= "\n test: " . $newContentCF5344 ;
 file_put_contents($myfile, $contentCF2343 );*/
 		
-		//if ($isValid) {
-				// Send welcome email to user
-		/*		import('lib.pkp.classes.mail.MailTemplate');
-				$user = ???
-				$mail = new MailTemplate('USER_REGISTER');
-				$mail->setReplyTo($context->getSetting('contactEmail'), $context->getSetting('contactName'));
-				$mail->assignParams(array('username' => $user->getUsername(), 'password' => $password, 'userFullName' => $user->getFullName()));
-				$mail->addRecipient($user->getEmail(), $user->getFullName());
-				$mail->send();*/
-		//}
 		if ($isValid) {
 			
 			$username = $registrationForm->_data['username'];
@@ -181,7 +169,7 @@ file_put_contents($myfile, $contentCF2343 );*/
 			case 'registrationform::Constructor':				
 				$form->setTemplate($this->getTemplatePath() . 'userRegisterModified.tpl');
 				$templateMgr->assign('templatePath', $this->getTemplatePath());
-				return true;				
+				return true;
 		}
 		return false;	
 	}
@@ -217,6 +205,7 @@ file_put_contents($myfile, $contentCF2343 );*/
 	function handleIncludeTemplate($hookName, $args) {
 		$templateMgr =& $args[0];
 		$params =& $args[1];
+
 		if (!isset($params['smarty_include_tpl_file'])) {
 			return false;
 		}
@@ -226,8 +215,9 @@ file_put_contents($myfile, $contentCF2343 );*/
 				'primaryNavMenuModified.tpl', 'text/html', 'TemplateManager::include');
 				return true;
 			case 'frontend/components/header.tpl':
-				$templateMgr->display($this->getTemplatePath() . 
-				'headerModified.tpl', 'text/html', 'TemplateManager::include');
+				$templateMgr->assign('pageTitleTranslated',$params['smarty_include_vars']['pageTitleTranslated']);
+				$templateMgr->assign('pageTitle',$params['smarty_include_vars']['pageTitle']);
+				$templateMgr->display($this->getTemplatePath() .'headerModified.tpl', 'text/html', 'TemplateManager::include');
 				return true;
 			case 'frontend/components/breadcrumbs.tpl':
 				$templateMgr->display($this->getTemplatePath() .'emptyTemplate.tpl', 'text/html', 'TemplateManager::include');
