@@ -279,18 +279,14 @@
 							{* Use a simplified presentation if only one file exists *}
 							{if $pubFormatFiles|@count == 1}
 								<div class="pub_format_{$publicationFormatId|escape} pub_format_single">
-									{foreach from=$pubFormatFiles item=file}
-									
-										
-{assign var=publicationFormatId value=$format->getBestId()}
-{* Generate the download URL *}
-{url|assign:downloadUrl op="view" path=$monograph->getBestId()|to_array:$publicationFormatId:$file->getBestId()}
-{* Display the download link *}
-<a href="{$downloadUrl}" class="cmp_download_link {$file->getDocumentType()}">
-{translate key="plugins.generic.cem.bookreader.linkname"}
-</a>	
-
-									
+									{foreach from=$pubFormatFiles item=file}									
+										{assign var=publicationFormatId value=$format->getBestId()}
+										{* Generate the download URL *}
+										{url|assign:downloadUrl op="view" path=$monograph->getBestId()|to_array:$publicationFormatId:$file->getBestId()}
+										{* Display the download link *}
+										<a href="{$downloadUrl}" class="cmp_download_link {$file->getDocumentType()}">
+											{translate key="plugins.generic.cem.bookreader.linkname"}
+										</a>										
 									{/foreach}							
 								</div>
 
@@ -319,12 +315,12 @@
 						{/if}
 					{/foreach}{* Publication formats loop *}
 					{if $publishedMonograph->getLocalizedData('cemogPrintOnDemandUrl') != ''}
-						<div>
+						<div class="pub_format_single">
 							<a class="cmp_download_link" href="{$publishedMonograph->getLocalizedData('cemogPrintOnDemandUrl')}">{translate key="plugins.generic.cemog.book.printOnDemand"}</a>
 						</div>
 					{/if}
 					{if $publishedMonograph->getLocalizedData('cemogOrderEbookUrl') != ''}
-						<div>
+						<div class="pub_format_single">
 							<a class="cmp_download_link" href="{$publishedMonograph->getLocalizedData('cemogOrderEbookUrl')}">{translate key="plugins.generic.cemog.book.orderEbook"}</a>
 						</div>
 					{/if}
