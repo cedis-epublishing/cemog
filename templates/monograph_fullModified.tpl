@@ -97,7 +97,7 @@
 				{if $publishedMonograph->getLocalizedData('cemogBookPressMaterial')}
 					<li><a href="#pressematerialien">{translate key="plugins.generic.cemog.bookpage.pressematerialien"}</a></li>
 				{/if}	
-				<li><a href="#">{translate key="plugins.generic.cemog.bookpage.feedback"}</a></li>			
+				{**<li><a href="#">{translate key="plugins.generic.cemog.bookpage.feedback"}</a></li>**}		
 			</ul>
 
 			{* Abstract *}
