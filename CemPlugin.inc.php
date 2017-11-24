@@ -157,8 +157,11 @@ class CemPlugin extends GenericPlugin {
 				$form->setTemplate($this->getTemplatePath() . 'publicProfileFormModified.tpl');
 				return true;
 			case 'contactform::Constructor':				
-				$form->setTemplate($this->getTemplatePath() . 'contactFormModified.tpl');
-				return true;
+				if ($form->_template=='user/contactForm.tpl') {
+					$form->setTemplate($this->getTemplatePath() . 'contactFormModified.tpl');
+					return true;
+				}
+				return false;
 			case 'registrationform::Constructor':				
 				$form->setTemplate($this->getTemplatePath() . 'userRegisterModified.tpl');
 				$templateMgr->assign('templatePath', $this->getTemplatePath());

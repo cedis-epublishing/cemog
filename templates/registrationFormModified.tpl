@@ -140,7 +140,7 @@
 				{else}
 					<input type="checkbox" name="cemogNewsletter" id="cemogNewsletter" value="1">				
 				{/if}
-				{translate key="plugins.generic.cemog.register.sendPassword"}				
+				{translate key="plugins.generic.cemog.register.newsletter"}
 			</label>
 		</div>		
 		<div class="sendPassword">
@@ -150,7 +150,7 @@
 				{else}
 					<input type="checkbox" name="sendPassword" id="sendPassword" value="1">				
 				{/if}
-				{translate key="plugins.generic.cemog.register.newsletter"}				
+				{translate key="plugins.generic.cemog.register.sendPassword"}
 			</label>
 		</div>
 		<div class="cemogTermsOfUse">
