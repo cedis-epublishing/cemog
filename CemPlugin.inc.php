@@ -113,13 +113,6 @@ class CemPlugin extends GenericPlugin {
 				$isValid = $isValid & $check->isValid();
 			}	
 		}
-		//$user = $registrationForm->getUser();
-		/*
-$myfile = 'test.txt';
-$newContentCF5344 = print_r($this->getTemplatePath(), true);
-$contentCF2343 = file_get_contents($myfile);
-$contentCF2343 .= "\n test: " . $newContentCF5344 ;
-file_put_contents($myfile, $contentCF2343 );*/
 		
 		if ($isValid) {
 			
