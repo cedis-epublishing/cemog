@@ -77,7 +77,7 @@
 		</h2>
 
 		<div class="author">
-			{$monograph->getAuthorString()|escape}
+			{$monograph->getAuthorString()|escape} {**{$monograph->getWorkType()}**}
 		</div>
 	</div>
 			

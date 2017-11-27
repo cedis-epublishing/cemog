@@ -13,8 +13,8 @@
 
 <locale name="de_DE" full_name="German">
 
-	<message key="plugins.generic.cem.displayName">Cem Plugin</message>
-	<message key="plugins.generic.cem.description">Plugin für alle Cem-Funktionen</message>
+	<message key="plugins.generic.cem.displayName">CeMoG Plugin</message>
+	<message key="plugins.generic.cem.description">Plugin für alle CeMoG-Funktionen</message>
 	
 	<message key="plugins.generic.cem.primnav.about">Edition Romiosini</message>
 	<message key="plugins.generic.cem.primnav.catalog">Buchkatalog</message>	
@@ -54,5 +54,6 @@
 	<message key="plugins.generic.cemog.bookpage.rezensionen">Rezensionen</message>
 	<message key="plugins.generic.cemog.bookpage.feedback">Ihr Feedback zum Buch</message>	
 
+	<message key="plugins.generic.cemog.register.loginlink">Account</message>	
 	
 </locale>

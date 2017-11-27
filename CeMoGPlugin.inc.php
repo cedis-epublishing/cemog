@@ -9,7 +9,7 @@
  *
  */
 import('lib.pkp.classes.plugins.GenericPlugin');
-class CemPlugin extends GenericPlugin {
+class CeMoGPlugin extends GenericPlugin {
 	/**
 	 * Register the plugin.
 	 * @param $category string
@@ -64,6 +64,7 @@ class CemPlugin extends GenericPlugin {
 		$userVars =& $params[1];
 		$userVars[] = 'cemogNewsletter';
 		$userVars[] = 'cemogTermsOfUse';
+		$userVars[] = 'sendPassword';		
 		return false;
 	}
 
@@ -113,15 +114,14 @@ class CemPlugin extends GenericPlugin {
 				$isValid = $isValid & $check->isValid();
 			}	
 		}
-		
 		if ($isValid) {
-			
 			$username = $registrationForm->_data['username'];
 			$password = $registrationForm->_data['password'];
 			$fullName = $registrationForm->_data['firstName']. " " . $registrationForm->_data['lastName'];
 			$email = $registrationForm->_data['email'];
+			$sendPassword = $registrationForm->_data['sendPassword'];
 
-			if ($username && $password) {
+			if ($username && $password && $sendPassword) {
 				// Send welcome email to user
 				import('lib.pkp.classes.mail.MailTemplate');		
 				$mail = new MailTemplate('USER_REGISTER');
@@ -181,7 +181,7 @@ class CemPlugin extends GenericPlugin {
 		$template =& $args[1];
 		
 		switch ($template) {	
-			case 'frontend/pages/book.tpl':	
+			case 'frontend/pages/book.tpl':			
 				$templateMgr->display($this->getTemplatePath() . 'bookModified.tpl', 'text/html', 'TemplateManager::display');
 				return true;
 			case 'frontend/pages/viewFile.tpl':	
@@ -210,9 +210,18 @@ class CemPlugin extends GenericPlugin {
 				$templateMgr->display($this->getTemplatePath() . 
 				'primaryNavMenuModified.tpl', 'text/html', 'TemplateManager::include');
 				return true;
-			case 'frontend/components/header.tpl':
-				$templateMgr->assign('pageTitleTranslated',$params['smarty_include_vars']['pageTitleTranslated']);
-				$templateMgr->assign('pageTitle',$params['smarty_include_vars']['pageTitle']);
+			case 'frontend/components/header.tpl':		
+				$pageTitle = $params['smarty_include_vars']['pageTitle'];	
+				if ($pageTitle=="navigation.catalog") {
+					$templateMgr->assign('pageTitle','plugins.generic.cem.primnav.catalog');		
+				} elseif($pageTitle=="announcement.announcements") {
+					$templateMgr->assign('pageTitle','plugins.generic.cemog.submission.primnav.announcements');					
+				} elseif($pageTitle=="about.aboutContext") {
+					$templateMgr->assign('pageTitle','plugins.generic.cem.primnav.about');					
+				} else {
+					$templateMgr->assign('pageTitleTranslated',$params['smarty_include_vars']['pageTitleTranslated']);
+					$templateMgr->assign('pageTitle',$params['smarty_include_vars']['pageTitle']);					
+				}
 				$templateMgr->display($this->getTemplatePath() .'headerModified.tpl', 'text/html', 'TemplateManager::include');
 				return true;
 			case 'frontend/components/breadcrumbs.tpl':
@@ -220,6 +229,9 @@ class CemPlugin extends GenericPlugin {
 				return true;
 			case 'frontend/components/breadcrumbs_catalog.tpl':
 				$templateMgr->display($this->getTemplatePath() .'emptyTemplate.tpl', 'text/html', 'TemplateManager::include');
+				return true;
+			case 'frontend/objects/monograph_summary.tpl':
+				$templateMgr->display($this->getTemplatePath() .'monograph_summaryModified.tpl', 'text/html', 'TemplateManager::include');
 				return true;
 		}
 		return false;

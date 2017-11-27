@@ -9,8 +9,8 @@
  */
 
 
-require_once('CemPlugin.inc.php');
+require_once('CeMoGPlugin.inc.php');
 
-return new CemPlugin ();
+return new CeMoGPlugin ();
 
 ?>

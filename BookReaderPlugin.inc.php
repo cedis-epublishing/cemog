@@ -109,7 +109,7 @@ class BookReaderPlugin extends ViewableFilePlugin {
 		$request = $this->getRequest();
 		$isImg = $request->getUserVar('img');
 		if ($this->canHandle($publishedMonograph, $publicationFormat, $submissionFile) && $isImg) {		
-			import('plugins.generic.cem.classes.ImgFileManager');
+			import('plugins.generic.cemog.classes.ImgFileManager');
 			$monographFileManager = new ImgFileManager($publishedMonograph->getContextId(), $publishedMonograph->getId());
 			$monographFileManager->downloadImgFile($fileId, $revision);
 			exit();

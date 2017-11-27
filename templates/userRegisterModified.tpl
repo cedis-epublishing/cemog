@@ -143,9 +143,8 @@
 			<button class="submit" type="submit">
 				{translate key="user.register"}
 			</button>
-
 			{url|assign:"rolesProfileUrl" page="user" op="profile" path="roles"}
-			<a href="{url page="login" source=$rolesProfileUrl}" class="login">{translate key="user.login"}</a>
+			<a href="{url page="login" source=$rolesProfileUrl}" class="login">{translate key="plugins.generic.cemog.register.loginlink"}</a>
 		</div>
 	</form>
 

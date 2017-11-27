@@ -17,7 +17,7 @@
 <div class="page page_book">
 
 	{* Display book details *}
-	{include file="../plugins/generic/cem/templates/monograph_fullModified.tpl" monograph=$publishedMonograph}
+	{include file="../plugins/generic/cemog/templates/monograph_fullModified.tpl" monograph=$publishedMonograph}
 
 	{* Display Dublin Core metadata *}
 	{include file="frontend/objects/monograph_dublinCore.tpl" monograph=$publishedMonograph}

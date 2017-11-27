@@ -121,7 +121,7 @@ br.enableMobileNav = true;
 br.mobileNavTitle = 'Edition Romiosini';
 
 // Override the path used to find UI images
-br.imagesBaseURL = baseUrl + '/plugins/generic/cem/bookreader/BookReader/images/';
+br.imagesBaseURL = baseUrl + '/plugins/generic/cemog/bookreader/BookReader/images/';
 
 br.getEmbedCode = function(frameWidth, frameHeight, viewParams) {
     return "Embed code is not supported.";

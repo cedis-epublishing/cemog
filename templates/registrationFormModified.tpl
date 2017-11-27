@@ -34,14 +34,7 @@
 				<input type="text" name="firstName" id="firstName" value="{$firstName|escape}" maxlength="40" required>
 			</label>
 		</div>
-		<div class="middle_name">
-			<label>
-				<span class="label">
-					{translate key="user.middleName"}
-				</span>
-				<input type="text" name="middleName" value="{$middleName|escape}" maxlength="40">
-			</label>
-		</div>
+		<input type="hidden" name="middleName" value="" maxlength="40">
 		<div class="last_name">
 			<label>
 				<span class="label">
@@ -54,18 +47,9 @@
 				<input type="text" name="lastName" id="lastName" value="{$lastName|escape}" maxlength="40" required>
 			</label>
 		</div>
-		<div class="affiliation">
-			<label>
-				<span class="label">
-					{translate key="user.affiliation"}
-					<span class="required">*</span>
-					<span class="pkp_screen_reader">
-						{translate key="common.required"}
-					</span>
-				</span>
-				<input type="text" name="affiliation[{$primaryLocale|escape}]" id="affiliation" value="{$affiliation.$primaryLocale|escape}" required>
-			</label>
-		</div>
+
+		<input type="hidden" name="affiliation[{$primaryLocale|escape}]" id="affiliation" value="">
+		{**
 		<div class="country">
 			<label>
 				<span class="label">
@@ -76,7 +60,7 @@
 					{html_options options=$countries selected=$country}
 				</select>
 			</label>
-		</div>	
+		</div> **}	
 	</div>
 </fieldset>
 

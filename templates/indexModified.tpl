@@ -32,21 +32,21 @@
 		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-fachliteratur1.jpg" alt="fachliteratur"> 
 	</a>
 	</div>
-	
-	{translate key="plugins.generic.cemog.submission.index.text"}
-
+	<div class="cemogHomepageText">
+		{translate key="plugins.generic.cemog.submission.index.text"}
+	</div>
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
 		<div class="cmp_announcements highlight_first">
-			<h2>
-				{translate key="announcement.announcements"}
+			<h2 class="title">
+				{translate key="plugins.generic.cemog.submission.primnav.announcements"}
 			</h2>
 			{foreach name=announcements from=$announcements item=announcement}
 				{if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
 					{php}break;{/php}
 				{/if}
 				{if $smarty.foreach.announcements.iteration == 1}
-					{include file="frontend/objects/announcement_summary.tpl" heading="h3"}
+					{include file="frontend/objects/announcement_summary.tpl" heading="h3"}					
 					<div class="more">
 				{else}
 					<article class="obj_announcement_summary">
@@ -59,8 +59,9 @@
 							{$announcement->getDatePosted()}
 						</div>
 					</article>
-				{/if}
-			{/foreach}
+					
+				{/if}								
+			{/foreach}			
 			</div><!-- .more -->
 		</div>
 	{/if}
