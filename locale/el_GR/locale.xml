@@ -57,6 +57,6 @@
 	<message key="plugins.generic.cemog.bookpage.rezensionen">Αναφορές στον Τύπο</message>	
 	<message key="plugins.generic.cemog.bookpage.feedback">Στείλτε μας τα σχόλιά σας</message>	
 
-	<message key="plugins.generic.cemog.register.loginlink">Account</message>
+	<message key="plugins.generic.cemog.register.loginlink">Λογαριασμός</message>
 	
 </locale>
