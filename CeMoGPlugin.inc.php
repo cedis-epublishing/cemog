@@ -1,11 +1,11 @@
 <?php
 /**
- * @file plugins/generic/primaryNavigation/PrimaryNavigationPlugin.inc.php
+ * @file plugins/generic/cemog/CeMoGPlugin.inc.php
  *
  * Copyright (c) 2017 FU Berlin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class PrimaryNavigationPlugin
+ * @class CeMoGPlugin
  *
  */
 import('lib.pkp.classes.plugins.GenericPlugin');
