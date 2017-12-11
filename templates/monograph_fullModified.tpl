@@ -84,10 +84,6 @@
 	<div class="row">
 		<div class="main_entry">
 		
-			<div>
-				{call_hook name="Templates::Catalog::Book::Details"}
-			</div>
-		
 			<ul class="jumpmark" >
 				<li><a href="#abstract">{translate key="plugins.generic.cemog.bookpage.aboutThisBook"}</a></li>
 				<li><a href="#author_bios">{translate key="plugins.generic.cemog.bookpage.biogramme"}</a></li>
@@ -187,13 +183,7 @@
 						{if $author->getLocalizedBiography()}
 							<div class="sub_item">
 								<div class="label">
-									{if $author->getLocalizedAffiliation()}
-										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
-										{capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedAffiliation()|escape}</span>{/capture}
-										{translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliation}
-									{else}
-										{$author->getFullName()|escape}
-									{/if}
+									{$author->getFullName()|escape}
 								</div>
 								<div class="value">
 									{$author->getLocalizedBiography()|strip_unsafe_html}
@@ -246,14 +236,6 @@
 			<div class="item cover">
 				<img alt="{translate key="catalog.coverImageTitle" monographTitle=$monograph->getLocalizedFullTitle()|strip_tags|escape}" src="{url router=$smarty.const.ROUTE_COMPONENT component="submission.CoverHandler" op="thumbnail" submissionId=$monograph->getId() random=$monograph->getId()|uniqid}" />
 			</div>
-
-			{* Sharing code *}
-			{if !is_null($sharingCode)}
-				<div class="item sharing">
-					{$sharingCode}
-				</div>
-			{/if}
-
 			{* Any non-chapter files and remote resources *}
 			{pluck_files assign=nonChapterFiles files=$availableFiles by="chapter" value=0}
 			{if $nonChapterFiles|@count}
@@ -327,6 +309,9 @@
 				</div>
 			{/if}
 
+			<div class="details">
+				{call_hook name="Templates::Catalog::Book::Details"}
+			</div>
 			{* Series *}
 			{if $series}
 				<div class="item series">

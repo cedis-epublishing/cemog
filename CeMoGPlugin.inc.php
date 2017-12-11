@@ -227,9 +227,9 @@ class CeMoGPlugin extends GenericPlugin {
 			case 'frontend/components/breadcrumbs.tpl':
 				$templateMgr->display($this->getTemplatePath() .'emptyTemplate.tpl', 'text/html', 'TemplateManager::include');
 				return true;
-			case 'frontend/components/breadcrumbs_catalog.tpl':
-				$templateMgr->display($this->getTemplatePath() .'emptyTemplate.tpl', 'text/html', 'TemplateManager::include');
-				return true;
+			//case 'frontend/components/breadcrumbs_catalog.tpl':
+				//$templateMgr->display($this->getTemplatePath() .'emptyTemplate.tpl', 'text/html', 'TemplateManager::include');
+				//return true;
 			case 'frontend/objects/monograph_summary.tpl':
 				$templateMgr->display($this->getTemplatePath() .'monograph_summaryModified.tpl', 'text/html', 'TemplateManager::include');
 				return true;
