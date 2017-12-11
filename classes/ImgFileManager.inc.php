@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/cemog/ImgFileManager.inc.php
  *
- * Copyright (c) 201´7 CeDiS, Freie Universität Berlin
+ * Copyright (c) 2017 Freie Universität Berlin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ImgFileManager
