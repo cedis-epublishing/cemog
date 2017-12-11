@@ -1,7 +1,6 @@
 {**
  * plugins/generic/cemog/bookreaderLink.tpl
- *{assign var=bookAbstract value=$publishedMonograph->getLocalizedAbstract()|strip_unsafe_html}
- * Copyright (c) 2015 CeDiS, Freie Universität Berlin	{assign var=bookAbstract value="test"}
+ * Copyright (c) 2017 FU Berlin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Link to embedded viewing of a Bookreader galley.
