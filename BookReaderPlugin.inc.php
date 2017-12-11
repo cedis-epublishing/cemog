@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/cemog/BookReaderPlugin.inc.php
  *
- * Copyright (c) 2017 CeDiS, Freie Universität Berlin
+ * Copyright (c) 2017 FU Berlin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BookreaderPlugin
@@ -144,7 +144,7 @@ class BookReaderPlugin extends ViewableFilePlugin {
 			// make directory
 			$fileManager->mkdir($zipDirName);
 			// extract the zip
-			// temporär ersetzt durch den Code unten
+			// temporÃ¤r ersetzt durch den Code unten
 			$zip = new ZipArchive();
   			$res = $zip->open($filePath);
   			if ($res === TRUE) {
