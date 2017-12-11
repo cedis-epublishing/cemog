@@ -14,7 +14,7 @@
 
 	<li{$submenu_class_attr}>
 		<a href="{url router=$smarty.const.ROUTE_PAGE page="about"}">
-			{translate key="plugins.generic.cem.primnav.about"}
+			{translate key="plugins.generic.cemog.primnav.about"}
 		</a>
 		{if $submenu_class_attr}
 		<ul>
@@ -50,13 +50,13 @@
 
 	<li>
 		<a href="{url router=$smarty.const.ROUTE_PAGE page="catalog"}">
-			{translate key="plugins.generic.cem.primnav.catalog"}
+			{translate key="plugins.generic.cemog.primnav.catalog"}
 		</a>
 	</li>
 	
 	<li>
 		<a href="{url router=$smarty.const.ROUTE_PAGE page="newsletter"}">
-			{translate key="plugins.generic.cem.primnav.newsletter"}
+			{translate key="plugins.generic.cemog.primnav.newsletter"}
 		</a>
 	</li>	
 

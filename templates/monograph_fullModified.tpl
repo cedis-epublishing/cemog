@@ -268,7 +268,7 @@
 										{url|assign:downloadUrl op="view" path=$monograph->getBestId()|to_array:$publicationFormatId:$file->getBestId()}
 										{* Display the download link *}
 										<a href="{$downloadUrl}" class="cmp_download_link {$file->getDocumentType()}">
-											{translate key="plugins.generic.cem.bookreader.linkname"}
+											{translate key="plugins.generic.cemog.bookreader.linkname"}
 										</a>										
 									{/foreach}							
 								</div>
@@ -310,9 +310,6 @@
 				</div>
 			{/if}
 
-			<div class="details">
-				{call_hook name="Templates::Catalog::Book::Details"}
-			</div>
 			{* Series *}
 			{if $series}
 				<div class="item series">
@@ -498,7 +495,9 @@
 					{/if}
 				{/foreach}
 			{/if}
-
+			<div class="details">
+				{call_hook name="Templates::Catalog::Book::Details"}
+			</div>
 		</div><!-- .details -->
 	</div><!-- .row -->
 

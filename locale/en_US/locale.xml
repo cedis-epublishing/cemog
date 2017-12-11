@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/cem/locale/en_US/locale.xml
+  * 
+  * Copyright (c) 2017 FU Berlin
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this plugin.
+  *
+  -->
+
+<locale name="en_US" full_name="English">
+
+	<message key="plugins.generic.cemog.displayName">CeMoG Plugin</message>
+	<message key="plugins.generic.cemog.description">Plugin für alle CeMoG-Funktionen</message>
+	
+	<message key="plugins.generic.cemog.primnav.about">Edition Romiosini</message>
+	<message key="plugins.generic.cemog.primnav.catalog">Buchkatalog</message>	
+	<message key="plugins.generic.cemog.primnav.newsletter">Newsletter</message>
+	<message key="plugins.generic.cemog.bookreader.linkname">Online Lesen</message>
+
+	<message key="plugins.generic.cemog.submission.additionalMetadata">Zusätzliche Metadaten</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.printOnDemand">Print-On-Demand-URL</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.orderEbook">eBook-Bestellen-URL</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.reviews">Rezensionen</message>
+	<message key="plugins.generic.cemog.submission.additionalMetadata.pressMaterial">Pressematerialien</message>	
+	<message key="plugins.generic.cemog.submission.index.text"><![CDATA[<p>Die <a href="../index">Edition Romiosini/CeMoG</a> veröffentlicht griechische und griechenlandbezogene Literatur (Belletristik, Sachbuch und Fachliteratur). Das Editionsprogramm umfasst die wichtigsten <a href="../catalog/series/belletristik">Autorinnen und Autoren der modernen und zeitgenössischen griechischen Literatur</a> sowie <a href="../catalog/series/sachbuch">Sachbücher</a> und <a href="../catalog/series/fachliteratur">Fachliteratur</a>, die ein facettenreiches Bild des modernen Griechenland sichtbar machen. Die Bücher werden in dieser Online-Bibliothek zur <a href="../online-bibliothek">kostenlosen Online-Lektüre</a> angeboten und können auch als <a href="https://www.epubli.de/shop/schlagwort/Edition+Romiosini">E-Book oder Book-on-Demand</a> erworben werden.</p>]]></message>
+	
+	<message key="plugins.generic.cemog.submission.primnav.announcements">Aktuelles</message>	
+	<message key="plugins.generic.cemog.book.printOnDemand">Printversion erwerben</message>
+	<message key="plugins.generic.cemog.book.orderEbook">E-Book erwerben</message>	
+	
+	<message key="plugins.generic.cemog.register.sendPassword"><![CDATA[Ja, ich möchte eine Bestätigungs-Email mit meinem Login und Passwort bekommen.]]></message>
+	<message key="plugins.generic.cemog.register.newsletter"><![CDATA[Ja, ich möchte mich für den <a href="http://www.cemog.fu-berlin.de/newsletter/newsletter-archiv/index.html" target="_blank">CeMoG-Newsletter</a> anmelden. Die Daten werden nicht an Dritte weitergegeben und ich kann mich jederzeit <a href="http://www.cemog.fu-berlin.de/newsletter/angaben-aktualisieren/index.html">abmelden</a>.]]></message>
+	<message key="plugins.generic.cemog.register.termsOfUse"><![CDATA[Ja, ich habe die <a href="http://bibliothek.edition-romiosini.de/nutzungsbedingungen" target="_blank">Nutzungsbedingungen</a> für die Online-Bibliothek der Edition Romiosini/CeMoG gelesen und akzeptiert.]]></message>
+	
+	<message key="plugins.generic.cemog.register.registerMessage"><![CDATA[<p>Der Buchkatalog der Edition Romiosini/CeMoG ist über die Online-Bibliothek frei zugänglich. Für die kostenlose Online-Lektüre der dort aufgeführten Publikationen ist eine Registrierung erforderlich. Vor der erstmaligen Nutzung des Bookreaders muss jede/r Nutzer/in sich mit einem Namen und einer Email-Adresse registrieren und die vorliegenden Nutzungsbedingungen anerkennen.</p><p><a href="../login">Klicken Sie hier</a>, wenn Sie bereits einen Login für die Nutzung der Online-Bibliothek haben.</p>]]></message>
+
+	<message key="plugins.generic.cemog.facebook.tooltip">Die Edition Romiosini bei Facebook</message>
+	<message key="plugins.generic.cemog.google.tooltip">Die Edition Romiosini bei Google+</message>	
+	<message key="plugins.generic.cemog.youtube.tooltip">Das Centrum Modernes Griechenland bei YouTube</message>	
+	<message key="plugins.generic.cemog.academia.tooltip">Die Edition Romiosini bei Academia.edu</message>		
+	<message key="plugins.generic.cemog.twitter.tooltip">Das Centrum Modernes Griechenland bei Twitter</message>
+	
+	<message key="plugins.generic.cemog.login.loginMessage">Melden Sie sich mit Ihrem Benutzernamen und Ihrem Passwort an, um die Bücher der Edition Romiosini kostenlos zu lesen.</message>
+	
+	
+	<message key="plugins.generic.cemog.bookpage.aboutThisBook">Über dieses Buch</message>
+	<message key="plugins.generic.cemog.bookpage.biogramme">Biogramme</message>
+	<message key="plugins.generic.cemog.bookpage.pressematerialien">Pressematerialien</message>
+	<message key="plugins.generic.cemog.bookpage.rezensionen">Rezensionen</message>
+	<message key="plugins.generic.cemog.bookpage.feedback">Ihr Feedback zum Buch</message>	
+
+	<message key="plugins.generic.cemog.register.loginlink">Sie sind bereits registriert? Hier anmelden...</message>
+	
+</locale>

@@ -3,7 +3,7 @@
 
 <!--
   * @file plugins/generic/cem/locale/de_DE/locale.xml
-  *
+  * 
   * Copyright (c) 2017 FU Berlin
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,13 +13,13 @@
 
 <locale name="de_DE" full_name="German">
 
-	<message key="plugins.generic.cem.displayName">CeMoG Plugin</message>
-	<message key="plugins.generic.cem.description">Plugin für alle CeMoG-Funktionen</message>
+	<message key="plugins.generic.cemog.displayName">CeMoG Plugin</message>
+	<message key="plugins.generic.cemog.description">Plugin für alle CeMoG-Funktionen</message>
 	
-	<message key="plugins.generic.cem.primnav.about">Edition Romiosini</message>
-	<message key="plugins.generic.cem.primnav.catalog">Buchkatalog</message>	
-	<message key="plugins.generic.cem.primnav.newsletter">Newsletter</message>
-	<message key="plugins.generic.cem.bookreader.linkname">Online Lesen</message>
+	<message key="plugins.generic.cemog.primnav.about">Edition Romiosini</message>
+	<message key="plugins.generic.cemog.primnav.catalog">Buchkatalog</message>	
+	<message key="plugins.generic.cemog.primnav.newsletter">Newsletter</message>
+	<message key="plugins.generic.cemog.bookreader.linkname">Online Lesen</message>
 
 	<message key="plugins.generic.cemog.submission.additionalMetadata">Zusätzliche Metadaten</message>
 	<message key="plugins.generic.cemog.submission.additionalMetadata.printOnDemand">Print-On-Demand-URL</message>

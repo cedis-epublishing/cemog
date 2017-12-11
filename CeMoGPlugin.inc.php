@@ -213,11 +213,11 @@ class CeMoGPlugin extends GenericPlugin {
 			case 'frontend/components/header.tpl':		
 				$pageTitle = $params['smarty_include_vars']['pageTitle'];	
 				if ($pageTitle=="navigation.catalog") {
-					$templateMgr->assign('pageTitle','plugins.generic.cem.primnav.catalog');		
+					$templateMgr->assign('pageTitle','plugins.generic.cemog.primnav.catalog');		
 				} elseif($pageTitle=="announcement.announcements") {
 					$templateMgr->assign('pageTitle','plugins.generic.cemog.submission.primnav.announcements');					
 				} elseif($pageTitle=="about.aboutContext") {
-					$templateMgr->assign('pageTitle','plugins.generic.cem.primnav.about');					
+					$templateMgr->assign('pageTitle','plugins.generic.cemog.primnav.about');					
 				} else {
 					$templateMgr->assign('pageTitleTranslated',$params['smarty_include_vars']['pageTitleTranslated']);
 					$templateMgr->assign('pageTitle',$params['smarty_include_vars']['pageTitle']);					
@@ -348,13 +348,13 @@ class CeMoGPlugin extends GenericPlugin {
 	 * @copydoc PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.generic.cem.displayName');
+		return __('plugins.generic.cemog.displayName');
 	}
 	/**
 	 * @copydoc PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.generic.cem.description');
+		return __('plugins.generic.cemog.description');
 	}
 	/**
 	 * @copydoc PKPPlugin::getTemplatePath

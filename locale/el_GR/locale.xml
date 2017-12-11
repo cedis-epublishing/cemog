@@ -13,13 +13,13 @@
 
 <locale name="el_GR" full_name="el_GR">
 
-	<message key="plugins.generic.cem.displayName">CeMoG Plugin</message>
-	<message key="plugins.generic.cem.description">Άρθρωμα του CeMoG για επιπλέον λειτουργίες στο OMP</message>
+	<message key="plugins.generic.cemog.displayName">CeMoG Plugin</message>
+	<message key="plugins.generic.cemog.description">Άρθρωμα του CeMoG για επιπλέον λειτουργίες στο OMP</message>
 	
-	<message key="plugins.generic.cem.primnav.about">Edition Romiosini</message>
-	<message key="plugins.generic.cem.primnav.catalog">Κατάλογος βιβλίων</message>	
-	<message key="plugins.generic.cem.primnav.newsletter">Newsletter</message>
-	<message key="plugins.generic.cem.bookreader.linkname">Online ανάγνωση</message>	
+	<message key="plugins.generic.cemog.primnav.about">Edition Romiosini</message>
+	<message key="plugins.generic.cemog.primnav.catalog">Κατάλογος βιβλίων</message>	
+	<message key="plugins.generic.cemog.primnav.newsletter">Newsletter</message>
+	<message key="plugins.generic.cemog.bookreader.linkname">Online ανάγνωση</message>	
 	
 	<message key="plugins.generic.cemog.submission.additionalMetadata">Συμπληρωματικά στοιχεία</message>
 	<message key="plugins.generic.cemog.submission.additionalMetadata.printOnDemand">URL για αγορά χαρτόδετης έκδοσης</message>
