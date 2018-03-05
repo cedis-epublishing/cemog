@@ -27,9 +27,10 @@
 	<message key="plugins.generic.cemog.submission.additionalMetadata.reviews">Αναφορές στον Τύπο</message>
 	<message key="plugins.generic.cemog.submission.additionalMetadata.pressMaterial">Αποσπάσματα</message>	
 	
-	<message key="plugins.generic.cemog.submission.index.text">
+<!--	<message key="plugins.generic.cemog.submission.index.text">
 	<![CDATA[<p>Η Ψηφιακή Βιβλιοθήκη της <a href="../index">Edition Romiosini/CeMoG</a> περιλαμβάνει <a href="../catalog/series/belletristik">μεταφράσεις νεοελληνικής λογοτεχνίας στα γερμανικά</a> καθώς και <a href="../catalog/series/sachbuch">μελέτες και δοκίμια από τον ευρύτερο χώρο των σπουδών της νεότερης και σύγχρονης Ελλάδας και των ελληνογερμανικών σχέσεων</a>. Η online ανάγνωση των βιβλίων διεξάγεται μέσω της εφαρμογής "<a href="../online-bibliothek">Online ανάγνωση</a>" σ' αυτή τη βιβλιοθήκη. Τα βιβλία διατίθενται επίσης στην αγορά είτε ως <a href="https://www.epubli.de/shop/schlagwort/Edition+Romiosini">ηλεκτρονικό βιβλίο</a> (e-book), είτε ως <a href="https://www.epubli.de/shop/schlagwort/Edition+Romiosini">χαρτόδετη έκδοση</a> (book on demand).</p>]]></message>	
-
+-->
+<message key="plugins.generic.cemog.submission.index.text"><![CDATA[<p>Η Ψηφιακή Βιβλιοθήκη της <a href="../index">Edition Romiosini/CeMoG</a> περιλαμβάνει <a href="../catalog/series/belletristik">μεταφράσεις νεοελληνικής λογοτεχνίας στα γερμανικά</a> καθώς και <a href="../catalog/series/sachbuch">μελέτες και δοκίμια από τον ευρύτερο χώρο των σπουδών της νεότερης και σύγχρονης Ελλάδας και των ελληνογερμανικών σχέσεων</a>. Η online ανάγνωση των βιβλίων πραγματοποιείται μέσω της εφαρμογής "<a href="../online-bibliothek">Online ανάγνωση</a>" σ' αυτή τη βιβλιοθήκη. Τα βιβλία διατίθενται επίσης στην αγορά είτε ως <a href="https://www.epubli.de/shop/schlagwort/Edition+Romiosini">ηλεκτρονικό βιβλίο</a> (e-book), είτε ως <a href="https://www.epubli.de/shop/schlagwort/Edition+Romiosini">χαρτόδετη έκδοση</a> (book on demand).</p>]]></message>
 	<message key="plugins.generic.cemog.submission.primnav.announcements">Ενημέρωση</message>	
 	<message key="plugins.generic.cemog.book.printOnDemand">Παραγγελία βιβλίου</message>
 	<message key="plugins.generic.cemog.book.orderEbook">Παραγγελία e-book</message>
@@ -50,10 +51,10 @@
 
 	<message key="plugins.generic.cemog.bookpage.aboutThisBook">Σύνοψη</message>
 	<message key="plugins.generic.cemog.bookpage.biogramme">Συντελεστές</message>
-	<message key="plugins.generic.cemog.bookpage.pressematerialien">Αναφορές στον Τύπο</message>
-	<message key="plugins.generic.cemog.bookpage.rezensionen">Αναφορές στον Τύπο</message>	
+	<message key="plugins.generic.cemog.bookpage.pressematerialien">Αναφορές</message>
+	<message key="plugins.generic.cemog.bookpage.rezensionen">Βιβλιοκρισία</message>	
 	<message key="plugins.generic.cemog.bookpage.feedback">Στείλτε μας τα σχόλιά σας</message>	
 
-	<message key="plugins.generic.cemog.register.loginlink">Έχετε ήδη λογαριασμό; Είσοδος...</message>
+	<message key="plugins.generic.cemog.register.loginlink">Έχετε ήδη λογαριασμό; Συνδεθείτε</message>
 	
 </locale>

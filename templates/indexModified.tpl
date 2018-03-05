@@ -21,8 +21,11 @@
 {include file="frontend/components/header.tpl"}
 
 <div class="page page_homepage">
-
 	<div class="cemog_home_image">
+		<a id="image_belletristik" href="{$baseUrl}/index.php/romiosini/catalog/series/belletristik"></a>
+		<a id="image_sachbuch" href="{$baseUrl}/index.php/romiosini/catalog/series/sachbuch"></a>
+		<a id="image_fachliteratur" href="{$baseUrl}/index.php/romiosini/catalog/series/sachbuch"></a>		
+{**	
 	<a href="{$baseUrl}/index.php/romiosini/catalog/series/belletristik">
 		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-belletristik1.jpg" alt="belletristik">
 	</a>
@@ -32,6 +35,7 @@
 	<a href="{$baseUrl}/index.php/romiosini/catalog/series/fachliteratur">	
 		<img src="{$baseUrl}/public/site/images/admin/romiosini-home-fachliteratur1.jpg" alt="fachliteratur"> 
 	</a>
+ *}	
 	</div>
 	<div class="cemogHomepageText">
 		{translate key="plugins.generic.cemog.submission.index.text"}
