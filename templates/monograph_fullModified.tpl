@@ -94,7 +94,7 @@
 				{if $publishedMonograph->getLocalizedData('cemogBookPressMaterial')}
 					<li><a href="#pressematerialien">{translate key="plugins.generic.cemog.bookpage.pressematerialien"}</a></li>
 				{/if}	
-				{**<li><a href="#">{translate key="plugins.generic.cemog.bookpage.feedback"}</a></li>**}		
+				<li><a href="#feedback">{translate key="plugins.generic.cemog.bookpage.feedbacktop"}</a></li>
 			</ul>
 
 			{* Abstract *}
@@ -198,7 +198,7 @@
 			{if $publishedMonograph->getLocalizedData('cemogBookReviews')}
 				<div class="item abstract" id="rezensionen">
 					<h3 class="label">
-						Rezensionen
+						{translate key="plugins.generic.cemog.bookpage.rezensionen"}
 					</h3>
 					<div class="value">
 						{$publishedMonograph->getLocalizedData('cemogBookReviews')|strip_unsafe_html}
@@ -209,13 +209,22 @@
 			{if $publishedMonograph->getLocalizedData('cemogBookPressMaterial')}			
 				<div class="item abstract" id="pressematerialien">
 					<h3 class="label">
-						Pressematerialien
+						{translate key="plugins.generic.cemog.bookpage.pressematerialien"}
 					</h3>
 					<div class="value">
 						{$publishedMonograph->getLocalizedData('cemogBookPressMaterial')|strip_unsafe_html}
 					</div>
 				</div>	
 			{/if}
+
+			<div class="item abstract" id="feedback">
+				<h3 class="label">
+					{translate key="plugins.generic.cemog.bookpage.feedbackbottom"}
+				</h3>
+				<div class="value">
+					{translate key="plugins.generic.cemog.bookpage.feedbackintro"}
+				</div>
+			</div>
 			
 			{* References *}
 			{if $monograph->getCitations()}

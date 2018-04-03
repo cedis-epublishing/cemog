@@ -53,7 +53,10 @@
 	<message key="plugins.generic.cemog.bookpage.biogramme">Συντελεστές</message>
 	<message key="plugins.generic.cemog.bookpage.pressematerialien">Αναφορές</message>
 	<message key="plugins.generic.cemog.bookpage.rezensionen">Βιβλιοκρισία</message>	
-	<message key="plugins.generic.cemog.bookpage.feedback">Στείλτε μας τα σχόλιά σας</message>	
+	<message key="plugins.generic.cemog.bookpage.feedbacktop">Τα σχόλιά σας</message>
+	<message key="plugins.generic.cemog.bookpage.feedbackbottom">Τα σχόλιά σας</message>
+<!--	<message key="plugins.generic.cemog.bookpage.feedback">Στείλτε μας τα σχόλιά σας</message>	-->
+	<message key="plugins.generic.cemog.bookpage.feedbackintro"><![CDATA[<p>Η Edition Romiosini εκδίδει μεταφράσεις νεοελληνικής λογοτεχνίας στα Γερμανικά. Για να εντοπιστούν τυχόν παραβλέψεις (τυπογραφικές και εκφραστικές) στα βιβλία η βοήθειά σας είναι ευπρόσδεκτη. Στείλτε μας τις παρατηρήσεις και τα σχόλιά σας, πατώντας τον παρακάτω σύνδεσμο.</p><p><a href="http://www.cemog.fu-berlin.de/edition-romiosini/PM_Feedback/index.html">Υποβολή σχολίων</a></p></p>]]></message>
 
 	<message key="plugins.generic.cemog.register.loginlink">Έχετε ήδη λογαριασμό; Συνδεθείτε</message>
 	

@@ -51,7 +51,9 @@
 	<message key="plugins.generic.cemog.bookpage.biogramme">Biogramme</message>
 	<message key="plugins.generic.cemog.bookpage.pressematerialien">Pressematerialien</message>
 	<message key="plugins.generic.cemog.bookpage.rezensionen">Rezensionen</message>
-	<message key="plugins.generic.cemog.bookpage.feedback">Ihr Feedback zum Buch</message>	
+	<message key="plugins.generic.cemog.bookpage.feedbacktop">Ihr Feedback zum Buch</message>
+	<message key="plugins.generic.cemog.bookpage.feedbackbottom">Feedback</message>
+	<message key="plugins.generic.cemog.bookpage.feedbackintro"><![CDATA[<p>Die Edition Romiosini veröffentlicht griechische bzw. griechenlandbezogene Literatur in deutscher Sprache und bietet alle Bücher zur kostenlosen Online-Lektüre an. Gerne würden wir dieses Angebot interaktiv gestalten: Wir freuen uns auf Ihre konstruktive Kritik in Form von Korrektur- oder Verbesserungsvorschlägen unserer Bücher. Ob es um eine Lücke, ein Missverständnis, eine Fehlinterpretation oder um den unvermeidlichen Druckteufel geht, Sie können uns gerne Ihre Bemerkungen schicken!</p><p><a href="http://www.cemog.fu-berlin.de/edition-romiosini/PM_Feedback/index.html">Zum Feedbackformular</a></p></p>]]></message>
 
 	<message key="plugins.generic.cemog.register.loginlink">Sie sind bereits registriert? Hier anmelden...</message>
 	
