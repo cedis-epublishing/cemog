@@ -244,7 +244,7 @@
 
 			{* Cover image *}
 			<div class="item cover">
-				<img alt="{translate key="catalog.coverImageTitle" monographTitle=$monograph->getLocalizedFullTitle()|strip_tags|escape}" src="{url router=$smarty.const.ROUTE_COMPONENT component="submission.CoverHandler" op="thumbnail" submissionId=$monograph->getId() random=$monograph->getId()|uniqid}" />
+				<img alt="{translate key="catalog.coverImageTitle" monographTitle=$monograph->getLocalizedFullTitle()|strip_tags|escape}" src="{url router=$smarty.const.ROUTE_COMPONENT component="submission.CoverHandler" op="cover" submissionId=$monograph->getId() random=$monograph->getId()|uniqid}" />
 			</div>
 			{* Any non-chapter files and remote resources *}
 			{pluck_files assign=nonChapterFiles files=$availableFiles by="chapter" value=0}
